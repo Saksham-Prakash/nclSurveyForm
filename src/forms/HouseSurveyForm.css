@@ -1,0 +1,133 @@
+
+
+/* CSS for HouseSurveyForm component */
+.house-survey-form {
+  max-width: 80%; /* Adjusted to percentage for responsiveness */
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ebe0e0;
+  border-radius: 15px;
+  box-shadow: 3px 0px 3px rgba(1, 0, 0, 0.1);
+}
+
+.house-survey-form label {
+  font-size: 1.2rem; /* Use rem units for better scalability */
+  font-weight: bold;
+  margin-bottom: 8px;
+  display: block; /* Changed to block for better alignment */
+  width: 100%; /* Full width for better alignment */
+}
+
+.house-survey-form input[type="text"],
+.house-survey-form input[type="number"] {
+  width: calc(100% - 22px); /* Adjust width for padding and border */
+  font-size: 1rem; /* Use rem units for better scalability */
+  padding: 10px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  display: block; /* Changed to block for better alignment */
+}
+
+select {
+  width: calc(100% - 22px); /* Adjust width for padding and border */
+  font-size: 1rem; /* Use rem units for better scalability */
+  padding: 10px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  display: block; /* Changed to block for better alignment */
+}
+
+select option {
+  font-size: 1.1rem; /* Use rem units for better scalability */
+}
+
+.house-survey-form button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, font-size 0.3s ease; /* Added font-size transition */
+  width: auto; /* Adjust width for better responsiveness */
+  padding: 10px 20px; /* Adjusted padding for better alignment */
+  margin-bottom: 16px;
+  display: inline-block;
+}
+
+.submit-button-container {
+  text-align: center;
+}
+
+.house-survey-form button[type="submit"]:hover {
+  background-color: #0056b3;
+  font-size: 1.2rem; /* Use rem units for better scalability */
+}
+
+.radio-group {
+  margin-bottom: 20px;
+}
+
+.radio-options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns with equal width */
+  grid-gap: 10px; /* Spacing between grid items */
+}
+
+.radio-options label {
+  display: block; /* Ensure labels take up full width of grid cell */
+  transition: font-size 0.3s ease; /* Smooth transition for font size change */
+}
+
+.radio-options input[type="radio"] {
+  margin-right: 5px; /* Adjust spacing between radio button and label */
+}
+
+.radio-options label:hover {
+  font-size: 1.2rem; /* Increase font size on hover */
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1200px) {
+  .house-survey-form label {
+    width: 80%; /* Adjust label width for smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .house-survey-form {
+    max-width: 90%; /* Set maximum width to 90% for smaller screens */
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+  
+  .house-survey-form label {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+    width: 100%; /* Full width for smaller screens */
+  }
+  
+  .house-survey-form input[type="text"],
+  .house-survey-form input[type="number"] {
+    width: calc(100% - 22px); /* Adjust width for smaller screens */
+  }
+  
+  select {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+  
+  .radio-options {
+    grid-template-columns: 1fr; /* Single column for smaller screens */
+  }
+}

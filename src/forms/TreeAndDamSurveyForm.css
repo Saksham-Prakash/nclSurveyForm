@@ -1,0 +1,107 @@
+/* TreeAndDamSurveyForm.css */
+
+.tree-dam-survey-form-container {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ebe0e0;
+    border-radius: 15px;
+    box-shadow: 3px 0px 3px rgba(1, 0, 0, 0.1);
+  }
+  
+  .title {
+    text-align: center;
+    color: #333;
+  }
+  
+  .tree-dam-survey-form label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: block;
+    width: 100%;
+  }
+  
+  .tree-dam-survey-form input[type="text"],
+  .tree-dam-survey-form input[type="number"],
+  .tree-dam-survey-form input[type="date"],
+  .tree-dam-survey-form select,
+  .tree-dam-survey-form textarea {
+    width: calc(100% - 22px);
+    font-size: 0.8rem;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: block;
+  }
+  
+  
+  .tree-dam-survey-form select option {
+    font-size: 1.1rem;
+  }
+  
+  .tree-dam-survey-form button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, font-size 0.3s ease;
+    width: auto;
+    padding: 10px 20px;
+    margin-bottom: 16px;
+    display: inline-block;
+  }
+  
+  .submit-button-container {
+    text-align: center;
+  }
+  
+  .tree-dam-survey-form button[type="submit"]:hover {
+    background-color: #0056b3;
+    font-size: 1.2rem;
+  }
+  
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+  
+  /* Media queries for responsiveness */
+  @media (max-width: 1200px) {
+    .tree-dam-survey-form label {
+      width: 80%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .tree-dam-survey-form-container {
+      max-width: 90%;
+      padding: 10px;
+    }
+    
+    .tree-dam-survey-form label {
+      font-size: 1rem;
+      width: 100%;
+    }
+    
+    .tree-dam-survey-form input[type="text"],
+    .tree-dam-survey-form input[type="number"],
+    .tree-dam-survey-form input[type="date"],
+    .tree-dam-survey-form select,
+    .tree-dam-survey-form textarea {
+      width: calc(100% - 22px);
+    }
+    
+    .tree-dam-survey-form select {
+      font-size: 1rem;
+    }
+  }
+  

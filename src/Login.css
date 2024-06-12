@@ -1,0 +1,36 @@
+/* src/LoginPage.css */
+.login_container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  .login_container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .login_container form h2 {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .login_container form input {
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+  
+  .login_container form button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .login_container form .error-message {
+    color: red;
+  }
+  
