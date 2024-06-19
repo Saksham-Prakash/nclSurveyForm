@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './FamilyDetailsForm.css';
 import axios from 'axios';
+import apiConfig from '../apiConfig'; 
 
 
 const FamilyDetailsForm = () => {
@@ -51,7 +52,7 @@ const FamilyDetailsForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:8080/api/family-details/add', formData);
+            const response = await axios.post(`${apiConfig.baseURL}/api/family-details/add`, formData);
             if (response.status === 201) {
                 alert('Family Details  saved successfully');
                 window.location.href = '/home'; // Redirect to home page
