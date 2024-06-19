@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './TreeAndDamSurveyForm.css';
+import apiConfig from '../apiConfig'; 
 
 const TreeAndDamSurveyForm = () => {
   const [formData, setFormData] = useState({
@@ -32,7 +33,7 @@ const TreeAndDamSurveyForm = () => {
 
   const sendData = async (data) => {
     try {
-      const response = await axios.post('http://localhost:8080/api/tree-surveys/add', data);
+      const response = await axios.post(`${apiConfig.baseURL}/api/tree-surveys/add`, data);
       console.log('Form submitted successfully:', response.data);
       window.alert('Form submitted successfully');
       window.location.href = '/home';

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './PublicStructureSurveyForm.css';
+import apiConfig from '../apiConfig'; 
 
 const PublicStructureSurveyForm = () => {
   const [formData, setFormData] = useState({
@@ -44,7 +45,7 @@ const PublicStructureSurveyForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:8080/api/public-structure-survey/add', formData);
+      const response = await axios.post(`${apiConfig.baseURL}/api/public-structure-survey/add`, formData);
       if (response.status === 201) {
         alert('Public structure survey saved successfully');
         window.location.href = '/home'; // Redirect to home page

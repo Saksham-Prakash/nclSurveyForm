@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './Login.css'; 
+import apiConfig from "./apiConfig"; 
 
 const LoginPage = () => {
   const [username, setUsername] = useState('');
@@ -14,7 +15,7 @@ const LoginPage = () => {
     e.preventDefault();
     try {
       // Make a POST request to the backend API endpoint
-      const response = await axios.post('http://localhost:8080/api/login', {
+      const response = await axios.post(`${apiConfig.baseURL}/api/login`, {
         username,
         password,
       });

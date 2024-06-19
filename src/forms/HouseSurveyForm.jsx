@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './HouseSurveyForm.css';
 import axios from 'axios';
+import apiConfig from '../apiConfig'; 
 
 const HouseSurveyForm = () => {
   const [formData, setFormData] = useState({
@@ -48,7 +49,7 @@ const HouseSurveyForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:8080/api/house-surveys/add', formData);
+      const response = await axios.post(`${apiConfig.baseURL}/api/house-surveys/add`, formData);
       console.log(response.data);
       window.alert('Form submitted successfully');
       // Redirect to the homepage after successful submission
